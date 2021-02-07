@@ -1,0 +1,97 @@
+body {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./images/hospital.png");
+    background-size: cover;
+}
+
+#juegoMemoria {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    width: 700px;
+    height: 700px;
+    margin: auto;
+}
+
+.icon {
+    margin-top: 15px;
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+}
+
+
+/* entire container, keeps perspective */
+
+.flip-container {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    perspective: 1000;
+}
+
+
+/* flip the pane when hovered */
+
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* flip speed goes here */
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+/* hide back of pane during swap */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    border-radius: 10px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px 5px 5px #aaa;
+}
+
+
+/* front pane, placed above back */
+
+.front {
+    font: 2em/100px "Helvetica Neue", Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    background: lightblue;
+}
+
+
+/* back, initially hidden pane */
+
+.back {
+    transform: rotateY(180deg);
+    background: lightsalmon;
+    text-align: center;
+    ;
+}
