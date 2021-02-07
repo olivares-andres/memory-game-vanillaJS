@@ -1,5 +1,8 @@
 proyecto realizado por Andres Olivares el 07 de febrero del 2021
 
+pagina del juego online
+https://memory-game-covid.netlify.app/
+
 recursos utilizados:
 
 efecto de giro de cartas
